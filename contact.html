@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - Animal Adoption & Rescue</title>
+  <link rel="stylesheet" href="contact.css" />
+  
+</head>
+<body>
+  <header>
+    <h1>Contact Us</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="donation.html">Donation</a>
+      <a href="adopt.html">Adopt</a>
+      <a href="rescue_Team.html">Rescue Team</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Register Here</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section id="contact">
+    <h2>Get in Touch</h2>
+    <p>If you have any questions or would like to learn more about adoption or donations, feel free to reach out!</p>
+
+    <form id="contactForm">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div id="doctor-info">
+        <h3>Nearby Animal Doctors:</h3>
+        <p><strong>Dr. Smith - Pet Care Clinic</strong><br>Location: 123 Pet St, Mumbai<br>Phone: <a href='tel:+919876543210'>+91 98765 43210</a></p>
+        <p><strong>Dr. Mehta - Happy Paws Vet</strong><br>Location: 456 Animal Rd, Delhi<br>Phone: <a href='tel:+918765432109'>+91 87654 32109</a></p>
+        <p><strong>Dr. Kapoor - Caring Hands Vet</strong><br>Location: 789 Rescue Ln, Bangalore<br>Phone: <a href='tel:+917654321098'>+91 76543 21098</a></p>
+      </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Animal Adoption & Rescue Services. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+
+   document.getElementById('contactForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  if (name && email && message) {
+    alert(`Thank you, ${name}! Your message has been received. We will get back to you at ${email} soon.`);
+    document.getElementById('contactForm').reset();
+  } else {
+    alert('Please fill in all fields before submitting.');
+  }
+});
+
+// Adding animal doctor information
+// const doctorInfo = [
+//   { name: 'Dr. Smith - Pet Care Clinic', location: '123 Pet St, Mumbai', phone: '+91 98765 43210' },
+//   { name: 'Dr. Mehta - Happy Paws Vet', location: '456 Animal Rd, Delhi', phone: '+91 87654 32109' },
+//   { name: 'Dr. Kapoor - Caring Hands Vet', location: '789 Rescue Ln, Bangalore', phone: '+91 76543 21098' }
+// ];
+
+const contactSection = document.getElementById('contact');
+const doctorList = document.createElement('div');
+doctorList.innerHTML = '<h3>Nearby Animal Doctors:</h3>';
+
+doctorInfo.forEach(doctor => {
+  const doctorCard = document.createElement('div');
+  doctorCard.innerHTML = `<p><strong>${doctor.name}</strong><br>Location: ${doctor.location}<br>Phone: <a href='tel:${doctor.phone}'>${doctor.phone}</a></p>`;
+  doctorList.appendChild(doctorCard);
+});
+
+contactSection.appendChild(doctorList);
+
+  </script>
+
+</body>
+</html>

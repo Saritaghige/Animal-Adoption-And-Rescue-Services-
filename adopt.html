@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adopt a Pet - Animal Adoption & Rescue</title>
+  <link rel="stylesheet" href="adopt.css" />
+ 
+</head>
+<body>
+  <header>
+    <h1>Find Your New Best Friend</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="donation.html">Donation</a>
+      <a href="adopt.html">Adopt</a>
+      <a href="rescue_Team.html">Rescue Team</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Register Here</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <section id="adopt">
+    <h2>Meet Our Lovely Pets</h2>
+    <p>These adorable pets are looking for a forever home. Adopt now and change a life!</p>
+
+    <div class="pet-container">
+      <div class="pet-card">
+        <img src="dog.1.jpeg" alt="Dog 1">
+        <h3>Tommy</h3>
+        <p>Age: 2 Months | Breed: Labrador Retriever</p>
+        <button onclick="adoptPet('Tommy')">Adopt Tommy</button>
+      </div>
+
+      <div class="pet-card">
+        <img src="cat1.jpeg" alt="Cat 1">
+        <h3>Soni</h3>
+        <p>Age: 1 Months | Breed: Street Normal Cat</p>
+        <button onclick="adoptPet('Soni')">Adopt Soni</button>
+      </div>
+
+      <div class="pet-card">
+        <img src="dog2.jpeg" alt="Dog 2">
+        <h3>Max</h3>
+        <p>Age: 1 years | Breed: Golden Retriever</p>
+        <button onclick="adoptPet('Max')">Adopt Max</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Animal Adoption & Rescue Services. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+
+function adoptPet(petName) {
+  alert(`Thank you for your interest in adopting ${petName}! We will contact you soon with further details.`);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log('Adopt page loaded successfully.');
+});
+
+  </script>
+</body>
+</html>

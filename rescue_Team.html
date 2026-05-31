@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rescue Team - Animal Adoption & Rescue</title>
+  <link rel="stylesheet" href="rescue_Team.css" />
+</head>
+<body>
+  <header>
+    <h1>Meet Our Rescue Team</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="donation.html">Donation</a>
+      <a href="adopt.html">Adopt</a>
+      <a href="rescue_Team.html">Rescue Team</a>
+      <a href="contact.html">Contact</a>
+      <a href="register.html">Register Here</a>
+      <a href="login.css">Login</a>
+
+    </nav>
+  </header>
+
+  <section id="rescue-team">
+    <h2>Our Dedicated Rescue Heroes</h2>
+    <p>Meet the passionate people who work day and night to save animals in need.</p>
+
+    <div class="team-container">
+      <div class="team-member">
+        <img src="team1.jpg" alt="Rescue Member 1">
+        <h3>John Doe</h3>
+        <p>Lead Rescuer with 10 years of experience in animal welfare.</p>
+      </div>
+
+      <div class="team-member">
+        <img src="team2.jpg" alt="Rescue Member 2">
+        <h3>Sarah Smith</h3>
+        <p>Veterinarian specializing in emergency animal care.</p>
+      </div>
+
+      <div class="team-member">
+        <img src="team3.jpg" alt="Rescue Member 3">
+        <h3>Michael Johnson</h3>
+        <p>Animal Behaviorist helping rescued animals recover emotionally.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Animal Adoption & Rescue Services. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    const teamMembers = document.querySelectorAll('.team-member');
+  
+    teamMembers.forEach(member => {
+      member.addEventListener('click', function() {
+        const name = this.querySelector('h3').textContent;
+        const description = this.querySelector('p').textContent;
+        alert(`Meet ${name} - ${description}`);
+      });
+    });
+  
+    console.log('Rescue Team page loaded successfully!');
+  });
+
+  </script>
+  
+</body>
+</html>

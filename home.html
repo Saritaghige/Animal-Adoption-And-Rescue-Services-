@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="navbar">
+            <h1 class="website-name">🐾 Animal Adoption And Rescue Services</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="adopt.html">Adopt</a></li>
+                    <li><a href="donation.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="rescue_Team.html">Rescue Team</a></li>
+                    <li><a href="register.html">Register Here</a></li>
+                    <li><a href="login.html">Login</a></li>
+
+        
+                </ul>
+            </nav>
+            <!-- <button class="login-btn" onclick="openModal()">Login</button> -->
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find your four-legged friends</h1>
+            <p>Here in the shelter, there will be friends for everyone.</p>
+            <button class="cta-btn">Adopt</button>
+        </div>
+    </section>
+
+    <script>document.addEventListener("DOMContentLoaded", function() {
+      const loginButton = document.querySelector(".login-btn");
+      const ctaButton = document.querySelector(".cta-btn");
+  
+      // Login Button Click
+      loginButton.addEventListener("click", function() {
+          alert("Login functionality coming soon!");
+      });
+  
+      // CTA Button Click
+      ctaButton.addEventListener("click", function() {
+          alert("Redirecting to adoption page...");
+      });
+  
+      // Smooth fade-in for hero section
+      const fadeElements = document.querySelectorAll(".fade-in");
+      fadeElements.forEach((el, index) => {
+          setTimeout(() => {
+              el.style.opacity = "1";
+              el.style.transform = "translateY(0)";
+          }, index * 300);
+      });
+  });
+  </script>
+</body>
+</html>

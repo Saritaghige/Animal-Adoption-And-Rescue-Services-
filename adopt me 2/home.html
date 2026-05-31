@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Adoption Home</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Animal Adoption & Rescue Services</h1>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="donation.html">Donation</a>
+      <a href="adopt.html">Adopt</a>
+      <a href="rescue_Team.html">Rescue Team</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">login</a>
+      
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Your New Best Friend is Waiting</h2>
+    <p>Adopt a pet and give them a forever home. Join us in our rescue mission.</p>
+    <img src="Adopt me.jpg" alt="Adopt a Pet" width="400px" />
+  </section>
+
+  <section id="donation">
+    <h2>Support Our Cause</h2>
+    <p>Your generous donations help us provide shelter, food, and medical care for rescued animals.</p>
+    <button onclick="window.location.href='donation.html'">Donate Now</button>
+  </section>
+
+  <section id="adopt">
+    <h2>Adopt a Pet</h2>
+    <p>Browse our list of adorable animals looking for a loving home.</p>
+    <button onclick="window.location.href='adopt.html'">View Pets</button>
+  </section>
+
+  <section id="rescue-team">
+    <h2>Meet Our Rescue Team</h2>
+    <p>Our dedicated team works tirelessly to save and protect animals in need.</p>
+    <button onclick="window.location.href='rescue_Team.html'">Learn More</button>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Have questions? Reach out to us and we'll be happy to help.</p>
+    <button onclick="window.location.href='contact.html'">Contact Now</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Animal Adoption & Rescue Services. All Rights Reserved.</p>
+  </footer>
+
+
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('nav a');
+  
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(event) {
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        
+        if (targetSection) {
+          event.preventDefault();
+          window.scrollTo({
+            top: targetSection.offsetTop - 60,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  
+    console.log('Home page script loaded successfully!');
+  });
+  </script>
+    
+   
+</body>
+</html>
+
